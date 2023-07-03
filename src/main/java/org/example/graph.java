@@ -34,17 +34,29 @@ public class graph {
                     graphBuilder.generateEdgeBetween(referrer, referee, allEmployees);
                 }
             }
+
         Viewer viewer = graph.display();
             graph.setAutoCreate(true);
             graph.setAttribute("layout.force", 1.3);
         graph.setAttribute("layout.quality", 3);
         final View view = viewer.getDefaultView();
+        //view.openInAFrame(true);
+        //view.addListener("enter text", textField);
+        //System.out.println(textField.getLocation());
+        JFrame frame = new JFrame("frame");
+        JTextField textField = new JTextField(20);
+        frame.setSize(400,400);
+        frame.add(textField);
+        frame.setVisible(true);
+
         view.getCamera().setViewPercent(1);
         ControlManager controlManager = new ControlManager(view);
         controlManager.enableKeyboardControls(viewer);
         controlManager.enableMouseControls();
         ChatBot chatBot = new ChatBot(allEmployees, view, graph);
         chatBot.routine(viewer);
+
+
     }
     private static String edgeNameFactory(String referrer, String referee) { return referrer + "---> " + referee; }
 }
