@@ -9,6 +9,7 @@ import org.graphstream.algorithm.Toolkit;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class GraphBuilder
 {
@@ -34,6 +35,10 @@ public class GraphBuilder
                     "\n text-background-mode:rounded-box;\n text-background-color:#C0E4D6;\n text-size:9;\n text-color: BLUE;");
            n.setAttribute("layout.weight", 23);
             people.add(referrer);
+            if(referrer.equals("Jeremy Minick")) {
+                System.out.println("Moved.");
+                n.setAttribute("layout.weight", 200);
+            }
         }
 
         if (!(people.contains(referee))) {
