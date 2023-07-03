@@ -22,14 +22,17 @@ public class graph {
     public static void main(String[] args) throws InterruptedException {
 
 
-        JFrame frame = new JFrame();
+        JFrame frame = new JFrame("frame");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        JPanel panel = new JPanel(new GridLayout()){
+        JPanel panel = new JPanel(new GridLayout(1,2)){
             @Override
             public Dimension getPreferredSize() {
                 return new Dimension(640, 480);
             }
         };
+        frame.setSize(640,480);
+        JLabel label = new JLabel("howdy");
+        panel.add(label);
 
         panel.setBorder(BorderFactory.createLineBorder(Color.blue, 5));
         List<Node> allEmployees = new ArrayList<>();
@@ -60,10 +63,6 @@ public class graph {
             graph.setAutoCreate(true);
             graph.setAttribute("layout.force", 1.3);
         graph.setAttribute("layout.quality", 3);
-
-
-
-
         view.getCamera().setViewPercent(1);
         ControlManager controlManager = new ControlManager(view);
         controlManager.enableKeyboardControls(viewer);
