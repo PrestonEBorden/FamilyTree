@@ -32,7 +32,7 @@ public class GraphBuilder
             n.setAttribute("ui.label", referrer);
             n.setAttribute("ui.style", "fill-color: #A020F0; \n size:5px; \n text-style: bold-italic; \n text-alignment:center; " +
                     "\n text-background-mode:rounded-box;\n text-background-color:#C0E4D6;\n text-size:9;\n text-color: BLUE;");
-           n.setAttribute("layout.weight", 100);
+           n.setAttribute("layout.weight", 23);
             people.add(referrer);
         }
 
@@ -42,7 +42,7 @@ public class GraphBuilder
             n.setAttribute("ui.style", "fill-color: #FFA500;\n" +
                     "size: 5px;\n text-style: bold-italic; \n text-alignment: center;\n text-background-mode:rounded-box;\n text-background-color:rgb(235,212,235); \n text-size:9; \n text-color: PURPLE;");
             n.setAttribute("ui.label", referee);
-            n.setAttribute("layout.weight", 100);
+            n.setAttribute("layout.weight", 20);
             people.add(referee);
         }
         return people;
@@ -51,7 +51,7 @@ public class GraphBuilder
     {
         Edge link = graph.addEdge(edgeNameFactory(referrer, referee), referrer, referee);
         link.setAttribute("ui.style", "size: 2px;");
-        link.setAttribute("layout.weight", 25);
+        link.setAttribute("layout.weight", 5);
         Node referrerNode = link.getNode0();
         Node refereeNode = link.getNode1();
 

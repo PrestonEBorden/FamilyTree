@@ -18,8 +18,6 @@ public class Main {
     public static void main(String[] args) throws IOException
     {
 
-
-
         String filePath = "src/main/resources/readable/Family.xlsx";
 
         try (FileInputStream stream = new FileInputStream(filePath);

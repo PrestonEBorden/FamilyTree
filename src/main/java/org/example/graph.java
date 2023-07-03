@@ -36,7 +36,7 @@ public class graph {
             }
         Viewer viewer = graph.display();
             graph.setAutoCreate(true);
-            graph.setAttribute("layout.force", 1.64);
+            graph.setAttribute("layout.force", 1.3);
         graph.setAttribute("layout.quality", 3);
         final View view = viewer.getDefaultView();
         view.getCamera().setViewPercent(1);
