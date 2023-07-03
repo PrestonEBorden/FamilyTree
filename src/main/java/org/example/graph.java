@@ -1,6 +1,7 @@
 package org.example;
 
 import javax.swing.*;
+import java.awt.*;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -8,6 +9,7 @@ import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Sheet;
 import org.graphstream.graph.implementations.*;
 import org.graphstream.graph.*;
+import org.graphstream.ui.swing_viewer.ViewPanel;
 import org.graphstream.ui.view.View;
 import org.graphstream.ui.view.Viewer;
 
@@ -18,6 +20,18 @@ public class graph {
 
     public graph() {}
     public static void main(String[] args) throws InterruptedException {
+
+
+        JFrame frame = new JFrame();
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        JPanel panel = new JPanel(new GridLayout()){
+            @Override
+            public Dimension getPreferredSize() {
+                return new Dimension(640, 480);
+            }
+        };
+
+        panel.setBorder(BorderFactory.createLineBorder(Color.blue, 5));
         List<Node> allEmployees = new ArrayList<>();
         System.setProperty("org.graphstream.ui", "swing");
         var graph = new MultiGraph("Tutorial 1");
@@ -36,18 +50,19 @@ public class graph {
             }
 
         Viewer viewer = graph.display();
+        final View view = viewer.getDefaultView();
+        panel.add((Component) view);
+        viewer.enableAutoLayout();
+        frame.add((Component) view);
+        frame.pack();
+        frame.setLocationRelativeTo(null);
+        frame.setVisible(true);
             graph.setAutoCreate(true);
             graph.setAttribute("layout.force", 1.3);
         graph.setAttribute("layout.quality", 3);
-        final View view = viewer.getDefaultView();
-        //view.openInAFrame(true);
-        //view.addListener("enter text", textField);
-        //System.out.println(textField.getLocation());
-        JFrame frame = new JFrame("frame");
-        JTextField textField = new JTextField(20);
-        frame.setSize(400,400);
-        frame.add(textField);
-        frame.setVisible(true);
+
+
+
 
         view.getCamera().setViewPercent(1);
         ControlManager controlManager = new ControlManager(view);
