@@ -9,7 +9,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5d7d041a-2c1c-46b1-b204-ab32e3a4ebfd" name="Changes" comment="Improved readability of nodes with many edges">
+    <list default="true" id="5d7d041a-2c1c-46b1-b204-ab32e3a4ebfd" name="Changes" comment="Increased layout.weight of graph to speed up render time">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/GraphBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/GraphBuilder.java" afterDir="false" />
     </list>
@@ -248,7 +248,14 @@
       <option name="project" value="LOCAL" />
       <updated>1688399849433</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Increased layout.weight of graph to speed up render time">
+      <created>1688404192674</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1688404192674</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -283,6 +290,7 @@
     <MESSAGE value="More CSS changes to node edges and gravity issues resolved on graph" />
     <MESSAGE value="workspace xml changes for better sync with GitHub" />
     <MESSAGE value="Improved readability of nodes with many edges" />
-    <option name="LAST_COMMIT_MESSAGE" value="Improved readability of nodes with many edges" />
+    <MESSAGE value="Increased layout.weight of graph to speed up render time" />
+    <option name="LAST_COMMIT_MESSAGE" value="Increased layout.weight of graph to speed up render time" />
   </component>
 </project>
