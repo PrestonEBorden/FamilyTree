@@ -24,17 +24,8 @@ public class graph {
 
         JFrame frame = new JFrame("frame");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        JPanel panel = new JPanel(new GridLayout(1,2)){
-            @Override
-            public Dimension getPreferredSize() {
-                return new Dimension(640, 480);
-            }
-        };
-        frame.setSize(640,480);
+        JPanel panel = new JPanel(new GridLayout(1,2));
         JLabel label = new JLabel("howdy");
-        panel.add(label);
-
-        panel.setBorder(BorderFactory.createLineBorder(Color.blue, 5));
         List<Node> allEmployees = new ArrayList<>();
         System.setProperty("org.graphstream.ui", "swing");
         var graph = new MultiGraph("Tutorial 1");
@@ -63,12 +54,19 @@ public class graph {
             graph.setAutoCreate(true);
             graph.setAttribute("layout.force", 1.3);
         graph.setAttribute("layout.quality", 3);
+
         view.getCamera().setViewPercent(1);
         ControlManager controlManager = new ControlManager(view);
         controlManager.enableKeyboardControls(viewer);
         controlManager.enableMouseControls();
+        label.setSize(10,10);
+        frame.add(label);
+        frame.setSize(1000,600);
+
+
         ChatBot chatBot = new ChatBot(allEmployees, view, graph);
         chatBot.routine(viewer);
+
 
 
     }
