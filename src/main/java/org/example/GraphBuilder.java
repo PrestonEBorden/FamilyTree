@@ -32,7 +32,7 @@ public class GraphBuilder
             Node n = graph.addNode(referrer);
             n.setAttribute("ui.label", referrer);
             n.setAttribute("ui.style", "fill-color: #A020F0; \n size:5px; \n text-style: bold-italic; \n text-alignment:center; " +
-                    "\n text-background-mode:rounded-box;\n text-background-color:#C0E4D6;\n text-size:7;\n text-color: BLUE;");
+                    "\n text-background-mode:rounded-box;\n text-background-color:#C0E4D6;\n text-size:8;\n text-color: BLUE;");
            n.setAttribute("layout.weight", 23);
             people.add(referrer);
             if(referrer.equals("Jeremy Minick")) {
@@ -45,7 +45,7 @@ public class GraphBuilder
 
             Node n = graph.addNode(referee);
             n.setAttribute("ui.style", "fill-color: #FFA500;\n" +
-                    "size: 5px;\n text-style: bold-italic; \n text-alignment: center;\n text-background-mode:rounded-box;\n text-background-color:rgb(235,212,235); \n text-size:7; \n text-color: PURPLE;");
+                    "size: 5px;\n text-style: bold-italic; \n text-alignment: center;\n text-background-mode:rounded-box;\n text-background-color:rgb(235,212,235); \n text-size:8; \n text-color: #0B5563;");
             n.setAttribute("ui.label", referee);
             n.setAttribute("layout.weight", 20);
             people.add(referee);
