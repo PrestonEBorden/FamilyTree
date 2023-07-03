@@ -55,7 +55,7 @@ public class GraphBuilder
     public List<Node> generateEdgeBetween(String referrer, String referee,List<Node> allEmployees)
     {
         Edge link = graph.addEdge(edgeNameFactory(referrer, referee), referrer, referee);
-        link.setAttribute("ui.style", "size: 2px;");
+        link.setAttribute("ui.style", "size: 2px;\n color:#333333;");
         link.setAttribute("layout.weight", 5);
         Node referrerNode = link.getNode0();
         Node refereeNode = link.getNode1();
