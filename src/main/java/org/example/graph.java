@@ -59,8 +59,13 @@ public class graph {
         ControlManager controlManager = new ControlManager(view);
         controlManager.enableKeyboardControls(viewer);
         controlManager.enableMouseControls();
-        label.setSize(10,10);
+
+       /* TextField textField = new TextField();
+        label.setSize(1,1);
         frame.add(label);
+        frame.add(textField);
+        */
+
         frame.setSize(1000,600);
 
 
